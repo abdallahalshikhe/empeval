@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Performance Evaluation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Employee Performance Evaluation</h1>
+        </header>
+
+        <form id="evalForm">
+            <!-- Section A: Employee Information -->
+            <section class="section-a">
+                <h2>Employee Information</h2>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Enter full name">
+                </div>
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <input type="text" id="department" name="department" required placeholder="Enter department">
+                </div>
+                <div class="form-group">
+                    <label for="jobDescription">Job Description</label>
+                    <textarea id="jobDescription" name="jobDescription" rows="3" placeholder="Enter job description"></textarea>
+                </div>
+            </section>
+
+            <!-- Section B: Performance Criteria -->
+            <section class="section-b">
+                <h2>Performance Criteria</h2>
+                <p class="subtitle">Rate from 0 to 100</p>
+                
+                <div class="criteria-grid">
+                    <div class="criteria-item">
+                        <label for="scoreTime">Time Management</label>
+                        <input type="number" id="scoreTime" name="scoreTime" min="0" max="100" value="0" class="score-input">
+                        <input type="range" id="rangeTime" min="0" max="100" value="0" class="score-range">
+                    </div>
+
+                    <div class="criteria-item">
+                        <label for="scoreTask">Task Completion</label>
+                        <input type="number" id="scoreTask" name="scoreTask" min="0" max="100" value="0" class="score-input">
+                        <input type="range" id="rangeTask" min="0" max="100" value="0" class="score-range">
+                    </div>
+
+                    <div class="criteria-item">
+                        <label for="scoreComm">Communication</label>
+                        <input type="number" id="scoreComm" name="scoreComm" min="0" max="100" value="0" class="score-input">
+                        <input type="range" id="rangeComm" min="0" max="100" value="0" class="score-range">
+                    </div>
+
+                    <div class="criteria-item">
+                        <label for="scoreCreative">Creativity</label>
+                        <input type="number" id="scoreCreative" name="scoreCreative" min="0" max="100" value="0" class="score-input">
+                        <input type="range" id="rangeCreative" min="0" max="100" value="0" class="score-range">
+                    </div>
+
+                    <div class="criteria-item">
+                        <label for="scorePersonal">Personal Growth</label>
+                        <input type="number" id="scorePersonal" name="scorePersonal" min="0" max="100" value="0" class="score-input">
+                        <input type="range" id="rangePersonal" min="0" max="100" value="0" class="score-range">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Result Section -->
+            <section class="result-section">
+                <div class="result-box">
+                    <h3>Total Score</h3>
+                    <span id="totalResult">0</span>
+                    <span class="max-score">/ 500</span>
+                </div>
+                <button type="submit" class="submit-btn">Submit Evaluation</button>
+            </section>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
